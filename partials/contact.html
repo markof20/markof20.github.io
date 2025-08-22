@@ -1,0 +1,40 @@
+<!-- ================= Contact ================= -->
+<section id="contact" class="section container" aria-labelledby="contact-title">
+  <h2 id="contact-title" class="section-title aos" data-aos="slide-up">Mettiamoci in Contatto</h2>
+  <p class="section-text aos" data-aos="fade-in" data-aos-delay="100">
+    Hai un'idea interessante o vuoi semplicemente salutarmi? Scrivimi! Sono sempre aperto a nuove collaborazioni.
+  </p>
+
+  <form id="contactForm" class="contact-form aos" data-aos="fade-in" novalidate aria-describedby="form-helper" action="https://formspree.io/f/mgvzgzyk" method="POST">
+    <div class="form-field">
+      <label for="name">Nome</label>
+      <input id="name" name="name" type="text" placeholder="Il tuo nome" required aria-required="true" />
+      <span class="error" role="alert"></span>
+    </div>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="nome@dominio.com" required aria-required="true" />
+      <span class="error" role="alert"></span>
+    </div>
+    <div class="form-field">
+      <label for="message">Messaggio</label>
+      <textarea id="message" name="message" rows="5" placeholder="Come posso aiutarti?" required aria-required="true"></textarea>
+      <span class="error" role="alert"></span>
+    </div>
+    <button class="btn btn-primary" type="submit">Invia Messaggio</button>
+    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+    <p id="form-helper" class="form-helper">
+      Oppure clicca qui: <a id="emailLink" href="mailto:marco.serv96@gmail.com">Mail</a>
+    </p>
+    <p id="form-status" class="form-helper" role="status" aria-live="polite"></p>
+    <input type="hidden" name="_subject" value="Nuovo messaggio dal portfolio">
+    <input type="hidden" name="_gotcha">
+    <input type="hidden" name="_replyto" id="_replyto">
+
+  </form>
+
+  <div class="contact-social aos" data-aos="fade-in" data-aos-delay="150" aria-label="Link ai social">
+    <a href="https://www.linkedin.com/in/marco-servidio/" class="social" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://dribbble.com/marco-servidio/" class="social" target="_blank" rel="noopener"><i class="fab fa-dribbble"></i></a>
+  </div>
+</section>

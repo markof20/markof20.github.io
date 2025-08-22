@@ -1,0 +1,77 @@
+<!-- ================= Projects ================= -->
+<section id="projects" class="section container" aria-labelledby="projects-title">
+  <h2 id="projects-title" class="section-title aos" data-aos="slide-up">Progetti Selezionati</h2>
+
+  <div class="projects-grid">
+    <!-- Medico Sereno -->
+    <article class="project-card aos" data-aos="fade-in" data-aos-delay="0" data-aos-offset="120" tabindex="0" aria-describedby="p1-desc">
+      <div class="project-media">
+        <img src="assets/img/medico-sereno.png" alt="Anteprima Medico Sereno - gestionale medico" loading="lazy" />
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Medico Sereno</h3>
+        <p id="p1-desc" class="project-desc">Gestionale medico: pazienti, visite, cartelle e fatturazione. Da desktop (Tkinter) a web app.</p>
+        <ul class="tag-list">
+          <li>Python</li><li>Flask</li><li>SQLite/PostgreSQL</li><li>UI/UX</li>
+        </ul>
+        <div class="project-actions">
+          <a href="#" class="btn btn-ghost-sm" target="_blank" rel="noopener">Live Demo</a>
+          <button class="btn btn-primary-sm open-modal" data-project="p1" aria-haspopup="dialog" aria-controls="modal">Dettagli</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Askhole -->
+    <article class="project-card aos" data-aos="fade-in" data-aos-delay="120" data-aos-offset="120" tabindex="0" aria-describedby="p2-desc">
+      <div class="project-media">
+        <img src="assets/img/ask-hole.png" alt="Anteprima Askhole - app mobile AI" loading="lazy" />
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Askhole</h3>
+        <p id="p2-desc" class="project-desc">App mobile di chat AI dal tono brillante e sarcastico. Freemium, backend Flask.</p>
+        <ul class="tag-list">
+          <li>Flutter</li><li>Flask</li><li>OpenAI API</li><li>Firebase</li>
+        </ul>
+        <div class="project-actions">
+          <a href="#" class="btn btn-ghost-sm" target="_blank" rel="noopener">Live Demo</a>
+          <button class="btn btn-primary-sm open-modal" data-project="p2" aria-haspopup="dialog" aria-controls="modal">Dettagli</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Programma Ricami -->
+    <article class="project-card aos" data-aos="fade-in" data-aos-delay="240" data-aos-offset="120" tabindex="0" aria-describedby="p3-desc">
+      <div class="project-media">
+        <img src="assets/img/ricamo.png" alt="Anteprima Programma Ricami - gestione lotti e PDF" loading="lazy" />
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Programma Ricami</h3>
+        <p id="p3-desc" class="project-desc">Gestione lotti di lavoro, taglie e PDF di produzione con UI semplificata.</p>
+        <ul class="tag-list">
+          <li>Web App</li><li>Node/Express</li><li>React</li><li>PDF</li>
+        </ul>
+        <div class="project-actions">
+          <a href="#" class="btn btn-ghost-sm" target="_blank" rel="noopener">Live Demo</a>
+          <button class="btn btn-primary-sm open-modal" data-project="p3" aria-haspopup="dialog" aria-controls="modal">Dettagli</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= Project Modal ================= -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" hidden>
+  <div class="modal-backdrop" data-close="true"></div>
+  <div class="modal-content" role="document">
+    <button class="modal-close" aria-label="Chiudi modale" data-close="true"><i class="fa-solid fa-xmark"></i></button>
+    <!-- Immagine del progetto -->
+    <div class="modal-media"><img id="modal-img" alt="" /></div>
+
+    <h3 id="modal-title">Titolo Progetto</h3>
+    <p id="modal-desc" class="modal-text">Descrizione estesa del progetto, obiettivi, sfide affrontate e ruolo.</p>
+    <ul class="modal-list" id="modal-list"></ul>
+    <div class="modal-actions">
+      <a id="modal-live" class="btn btn-primary-sm" target="_blank" rel="noopener">Live Demo</a>
+    </div>
+  </div>
+</div>
