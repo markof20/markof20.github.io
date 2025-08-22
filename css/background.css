@@ -1,0 +1,99 @@
+/* ======= Rich Background & Polish ======= */
+
+/* Layer di sfondo */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.bg-gradient {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(1200px 800px at 85% -10%, rgba(0,123,255,.22), transparent 55%),
+    radial-gradient(1000px 700px at 10% 110%, rgba(23,162,184,.20), transparent 60%),
+    radial-gradient(1400px 900px at 50% 120%, rgba(0,0,0,.45), transparent 60%);
+  filter: saturate(1.1);
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  opacity: .07;
+  background-image:
+    linear-gradient(to right, #fff 1px, transparent 1px),
+    linear-gradient(to bottom, #fff 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(1200px 800px at 60% 10%, rgba(0,0,0,1), rgba(0,0,0,0.2) 70%, transparent 90%);
+}
+
+.bg-noise {
+  position: absolute;
+  inset: 0;
+  opacity: .035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAI0lEQVQYV2NkYGD4z0AEMFGqYQRjGJgGkGQYg2EwCkQ0GAAAC2cEo0i2B1QAAAAASUVORK5CYII=");
+  background-size: 160px 160px;
+}
+
+/* Orbs animate (accenti soft) */
+.orb {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(0,123,255,.55), rgba(0,123,255,0) 60%);
+  filter: blur(20px);
+  animation: float 18s ease-in-out infinite;
+}
+
+.orb-1 { top: 12%; left: 60%; }
+.orb-2 {
+  bottom: 5%; left: 12%;
+  background: radial-gradient(circle at 60% 40%, rgba(23,162,184,.55), rgba(23,162,184,0) 60%);
+  animation-duration: 22s;
+}
+
+@keyframes float {
+  0%,100% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(20px, -18px, 0); }
+}
+
+/* Riduci motion se preferito */
+@media (prefers-reduced-motion: reduce) {
+  .orb { animation: none; }
+  .aos { transition: none; }
+}
+
+/* Canvas globale sfondo */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  filter: blur(2px) opacity(0.5); /* sfondo offuscato e meno intenso */
+  pointer-events: none;           /* evita blocchi sul click */
+}
+
+/* Hero canvas (secondo layer locale) */
+.hero { position: relative; overflow: hidden; }
+#heroCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;           /* sotto al contenuto hero */
+  opacity: .45;
+  filter: blur(.5px);
+}
+
+/* assicurati che il contenuto hero stia sopra */
+.hero > *:not(#heroCanvas) {
+  position: relative;
+  z-index: 1;
+}

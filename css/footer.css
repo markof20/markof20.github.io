@@ -1,0 +1,47 @@
+/* ================= Footer ================= */
+.footer {
+  border-top: 1px solid var(--outline);
+  padding: 28px 0;
+  background: #111;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.to-top {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--outline);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.to-top:hover { border-color: var(--primary); }
+
+/* Logo nella navbar e nel footer */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+  transition: transform .15s ease;
+}
+
+.brand:hover .brand-logo { transform: scale(1.05); }
+
+@media (max-width: 480px) {
+  .brand-logo { width: 24px; height: 24px; }
+}

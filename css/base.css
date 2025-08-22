@@ -1,0 +1,54 @@
+/* ================= Base & Reset ================= */
+:root {
+  --bg: #1a1a1a;               /* sfondo principale */
+  --text: #F8F9FA;             /* testo principale */
+  --text-muted: #adb5bd;       /* testo secondario */
+  --primary: #007BFF;          /* blu elettrico */
+  --secondary: #17A2B8;        /* ciano/verde acqua */
+  --surface: #232323;          /* pannelli/card */
+  --outline: rgba(255,255,255,.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Containers & Utilities */
+.container {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: clamp(64px, 8vw, 120px) 0;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: .6px;
+  font-size: clamp(1.6rem, 1.1rem + 2vw, 2.2rem);
+  margin: 0 0 1.25rem;
+}
+
+.section-text {
+  color: var(--text-muted);
+  max-width: 70ch;
+}
+
+/* Links */
+a { color: var(--primary); }
+a:hover { color: #5cb3ff; }
+
+/* Active section accent (scrollspy) */
+:target { scroll-margin-top: 82px; }

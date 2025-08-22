@@ -1,0 +1,52 @@
+/* ================= Services ================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform .15s ease, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(0,0,0,.4);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: .4rem;
+  color: var(--secondary);
+}
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+/* Effetto gradient border condiviso */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  z-index: 0;
+  background: linear-gradient(120deg, rgba(0,123,255,.35), rgba(23,162,184,.25) 40%, rgba(255,255,255,0) 60%);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+}
+
+.service-card > * { position: relative; z-index: 1; }
