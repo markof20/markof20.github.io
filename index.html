@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marco Servidio — Portfolio | Sviluppatore Full-Stack e UI/UX Designer</title>
+  <meta name="description" content="Portfolio di Marco Servidio: Sviluppatore Full-Stack e UI/UX Designer. Progetti selezionati, servizi e contatti." />
+  <meta name="keywords" content="Marco Servidio, portfolio, full-stack, ui ux, flutter, python, flask, react, design" />
+  <meta name="theme-color" content="#1a1a1a" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles (modulari) -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/cta-metrics.css" />
+  <link rel="stylesheet" href="css/background.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+  <link rel="stylesheet" href="css/preloader.css" />
+
+  <!-- Icons per dispositivi -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/logo-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-180.png">
+</head>
+<body id="top">
+  <!-- Background layers -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <!-- Fallback se JS è disabilitato -->
+  <noscript>
+    <style>#preloader{display:none!important}</style>
+    <div style="background:#1a1a1a;color:#F8F9FA;padding:12px;text-align:center">
+      Questo sito richiede JavaScript abilitato.
+    </div>
+  </noscript>
+
+  <!-- Partials caricati via include.js -->
+  <div data-include="partials/preloader.html"></div>
+  <div data-include="partials/navbar.html"></div>
+
+  <main>
+    <div data-include="partials/hero.html"></div>
+    <div data-include="partials/metrics.html"></div>
+    <div data-include="partials/about.html"></div>
+    <div data-include="partials/projects.html"></div>
+    <div data-include="partials/cta.html"></div>
+    <div data-include="partials/services.html"></div>
+    <div data-include="partials/contact.html"></div>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <!-- Loader dei partials (prima di main.js) -->
+  <script src="include.js"></script>
+  <!-- Inizializzazione app -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
